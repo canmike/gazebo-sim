@@ -67,7 +67,8 @@ export GAZEBO_PLUGIN_PATH=~/ardupilot_gazebo/build:${GAZEBO_PLUGIN_PATH}
 ### Swarm
 - Make 3 copies of iris_with_standoffs_demo.
 ```
-cd ardupilot_gazebo/models
+cd ~/ardupilot_gazebo/models
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)
 cp -r iris_with_standoffs_demo iris_with_standoffs_demo_1
 cp -r iris_with_standoffs_demo iris_with_standoffs_demo_2
 cp -r iris_with_standoffs_demo iris_with_standoffs_demo_3
@@ -161,7 +162,6 @@ gedit model.sdf
  cd ~/ardupilot_gazebo/worlds
  
  cp iris_ardupilot.world iris_multiuav.world
- export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$(pwd)
 
  gedit iris_multiuav.world
 ```
