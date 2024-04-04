@@ -61,6 +61,7 @@ export GAZEBO_RESOURCE_PATH=~/ardupilot_gazebo/worlds:${GAZEBO_RESOURCE_PATH}
 export GAZEBO_PLUGIN_PATH=~/ardupilot_gazebo/build:${GAZEBO_PLUGIN_PATH}
 ```
 
+### Swarm
 - Make 3 copies of iris_with_standoffs_demo.
 ```
 cd ardupilot_gazebo/models
