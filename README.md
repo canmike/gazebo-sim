@@ -48,15 +48,12 @@ cmake ..
 make -j2
 sudo make install
 ```
-After installation of this plugin, you need to add lines below inside your bash (bashrc, zshrc, ...):
+- After installation of this plugin, you need to add lines below inside your bash (bashrc, zshrc, ...):
 ```
 source /usr/share/gazebo/setup.sh
-```
-
-```
 gedit ./.bashrc
 ```
-Write these lines in bashrc.
+- Write these lines in bashrc.
 ```
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models:${GAZEBO_MODEL_PATH}
 export GAZEBO_MODEL_PATH=~/ardupilot_gazebo/models_gazebo:${GAZEBO_MODEL_PATH}
@@ -64,7 +61,7 @@ export GAZEBO_RESOURCE_PATH=~/ardupilot_gazebo/worlds:${GAZEBO_RESOURCE_PATH}
 export GAZEBO_PLUGIN_PATH=~/ardupilot_gazebo/build:${GAZEBO_PLUGIN_PATH}
 ```
 
-
+- Make 3 copies of iris_with_standoffs_demo.
 ```
 cd ardupilot_gazebo/models
 cp -r iris_with_standoffs_demo iris_with_standoffs_demo_1
@@ -73,13 +70,12 @@ cp -r iris_with_standoffs_demo iris_with_standoffs_demo_3
 ```
 
 
-
+- In iris_with_standoffs_demo_1,
 ```
 cd iris_with_standoffs_demo_1
 gedit model.sdf
 ```
-change this
-    
+- Change this:    
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
 
@@ -89,9 +85,7 @@ change this
       
       <fdm_port_out>9003</fdm_port_out>
 ```
-
-to this
-
+- To this:
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
     
@@ -102,16 +96,14 @@ to this
       <fdm_port_out>9013</fdm_port_out>
 ```
       
+- In iris_with_standoffs_demo_2,
 ```
-cd ..
-
-cd iris_with_standoffs_demo_2
+cd ../iris_with_standoffs_demo_2
 
 gedit model.sdf
 ```
 
-change this
-    
+- Change this:    
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
 
@@ -122,8 +114,7 @@ change this
       <fdm_port_out>9003</fdm_port_out>
 ```
 
-to this
-
+- To this:
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
     
@@ -134,16 +125,14 @@ to this
       <fdm_port_out>9023</fdm_port_out>
 ```
       
+- In iris_with_standoffs_demo_3,
 ```
-cd ..
-
-cd iris_with_standoffs_demo_3
+cd ../iris_with_standoffs_demo_3
 
 gedit model.sdf
 ```
 
-change this
-    
+- Change this:    
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
 
@@ -154,8 +143,7 @@ change this
       <fdm_port_out>9003</fdm_port_out>
 ```
 
-to this
-
+- To this:
 ```
     <plugin name="arducopter_plugin" filename="libArduPilotPlugin.so">
     
@@ -166,7 +154,7 @@ to this
       <fdm_port_out>9033</fdm_port_out>
 ```
 
-
+- Make a copy of iris_ardupilot.world in ardupilot_gazebo/worlds
 ```
  cd ~/ardupilot_gazebo/worlds
  
