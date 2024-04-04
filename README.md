@@ -187,6 +187,7 @@ to this
     </model>
 ```
 - To this:
+```
     <model name="iris_demo_1">
       <pose> 0 0 0 0 0 0 </pose>
       <include>
