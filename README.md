@@ -31,7 +31,7 @@ The latest version (4.3.6 at the time of writing) used in this tutorial. You can
 ```
 git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
-git submodule update --init –recursive
+git submodule update --init --recursive
 alias waf="$PWD/modules/waf/waf-light"
 waf configure --board=sitl
 waf all
