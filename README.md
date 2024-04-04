@@ -12,7 +12,7 @@ sudo apt update
 sudo apt install ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-future
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-future python3-mavproxy
 sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
@@ -194,3 +194,21 @@ gedit model.sdf
       </include>
     </model>
 ```
+### Testing
+```
+- Open a terminal for each UAV and run the commands below in each of them (3 UAV example):
+```
+# First terminal:
+mavproxy.py --master=tcp:localhost:5760
+
+# Second terminal:
+mavproxy.py --master=tcp:localhost:5770
+
+# Third terminal:
+mavproxy.py --master=tcp:localhost:5780
+```
+- Open a new terminal and run the command below:
+```
+gazebo --verbose ~/ardupilot_gazebo/worlds/iris_multiuav.world
+```
+- Wait for each UAV to get "APM: EKF2 IMU0 is using GPS" message and then you can control UAVs.
