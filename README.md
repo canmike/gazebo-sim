@@ -159,11 +159,9 @@ gedit model.sdf
 
 - Make a copy of iris_ardupilot.world in ardupilot_gazebo/worlds
 ```
- cd ~/ardupilot_gazebo/worlds
- 
- cp iris_ardupilot.world iris_multiuav.world
-
- gedit iris_multiuav.world
+cd ~/ardupilot_gazebo/worlds
+cp iris_ardupilot.world iris_multiuav.world
+gedit iris_multiuav.world
 ```
 
 - Open the new iris_multiuav.world file and change the bottom of file from this:
