@@ -34,6 +34,8 @@ cd ardupilot
 git submodule update --init --recursive
 alias waf="$PWD/modules/waf/waf-light"
 waf configure --board=sitl
+# If python error:
+# sudo ln -s /usr/bin/python3 /usr/bin/python
 waf all
 ./Tools/environment_install/install-prereqs-ubuntu.sh -y
 ```
