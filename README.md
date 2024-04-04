@@ -195,7 +195,6 @@ gedit model.sdf
     </model>
 ```
 ### Testing
-```
 - Open a terminal for each UAV and run the commands below in each of them (3 UAV example):
 ```
 # First terminal:
