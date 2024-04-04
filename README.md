@@ -100,7 +100,6 @@ gedit model.sdf
 - In iris_with_standoffs_demo_2,
 ```
 cd ../iris_with_standoffs_demo_2
-
 gedit model.sdf
 ```
 
@@ -129,7 +128,6 @@ gedit model.sdf
 - In iris_with_standoffs_demo_3,
 ```
 cd ../iris_with_standoffs_demo_3
-
 gedit model.sdf
 ```
 
