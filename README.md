@@ -40,6 +40,7 @@ waf all
 
 ### Ardupilot_gazebo
 ```
+cd ..
 git clone https://github.com/SwiftGust/ardupilot_gazebo
 cd ardupilot_gazebo
 mkdir build
