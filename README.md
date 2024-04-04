@@ -197,18 +197,23 @@ gedit iris_multiuav.world
 ```
 ### Testing
 - Open a terminal for each UAV and run the commands below in each of them (3 UAV example):
+
 ```
 # First terminal:
-mavproxy.py --master=tcp:localhost:5760
+cd ~/ardupilot1/Tools/autotest
+./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I0
 
 # Second terminal:
-mavproxy.py --master=tcp:localhost:5770
+cd ~/ardupilot1/Tools/autotest
+./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I1
 
 # Third terminal:
-mavproxy.py --master=tcp:localhost:5780
+cd ~/ardupilot1/Tools/autotest
+./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I2
 ```
 - Open a new terminal and run the command below:
+
 ```
 gazebo --verbose ~/ardupilot_gazebo/worlds/iris_multiuav.world
 ```
-- Wait for each UAV to get "APM: EKF2 IMU0 is using GPS" message and then you can control UAVs.
+
