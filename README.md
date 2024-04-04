@@ -200,15 +200,15 @@ gedit iris_multiuav.world
 
 ```
 # First terminal:
-cd ~/ardupilot1/Tools/autotest
+cd ~/ardupilot/Tools/autotest
 ./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I0
 
 # Second terminal:
-cd ~/ardupilot1/Tools/autotest
+cd ~/ardupilot/Tools/autotest
 ./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I1
 
 # Third terminal:
-cd ~/ardupilot1/Tools/autotest
+cd ~/ardupilot/Tools/autotest
 ./sim_vehicle.py -v ArduCopter -f gazebo-iris --console -I2
 ```
 - Open a new terminal and run the command below:
