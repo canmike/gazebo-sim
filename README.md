@@ -12,8 +12,8 @@ sudo apt update
 sudo apt install ros-noetic-desktop-full
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-future python3-mavproxy
-sudo apt install python3-rosdep
+sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-future python3-pip
+pip install mavproxy
 sudo rosdep init
 rosdep update
 ```
